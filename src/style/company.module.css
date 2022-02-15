@@ -1,0 +1,159 @@
+.wrapper {
+  padding: 0 2rem;
+}
+.company__card {
+  max-height: 520px;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+}
+.inverse__container,
+.container {
+  display: flex;
+  height: 100%;
+}
+.company__card .inverse__container {
+  flex-direction: row-reverse;
+}
+.text__card {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  row-gap: 1.5rem;
+}
+.text__card h1 {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 500;
+}
+.image__card_company {
+  width: 45%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 15rem 0;
+}
+/* first card */
+.company__card:nth-child(1) > * .image__card_company {
+  background-image: url(../../public/assets/about/desktop/image-about-hero.jpg);
+}
+.company__card:nth-child(1) > * .text__card {
+  background-image: url(../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 60%;
+  background-color: var(--peach);
+  color: white;
+}
+/* first card */
+
+/* second card */
+.company__card:nth-child(2) > * .image__card_company {
+  background-image: url(../../public/assets/about/desktop/image-real-deal.jpg);
+}
+
+.company__card:nth-child(2) > * .text__card {
+  background-image: url(../../public/assets/shared/desktop/bg-pattern-three-circles.svg);
+  background-size: cover;
+  background-position: -200% bottom;
+  background-color: var(--verylightpeach);
+}
+.company__card:nth-child(2) > * .text__card h1 {
+  color: var(--peach);
+}
+/* second card */
+
+/* third card */
+/* due to the insertion of the locations components this component even thour is the third of the cards 
+its the fourth of the components branch that why we use the number 4 instead of the*/
+.wrapper > .company__card:nth-child(4) > * .image__card_company {
+  background-image: url(../../public/assets/about/desktop/image-world-class-talent.jpg);
+}
+
+.wrapper > .company__card:nth-child(4) > * .text__card {
+  background-image: url(../../public/assets/shared/desktop/bg-pattern-three-circles.svg);
+  background-size: cover;
+  background-position: -200% bottom;
+  background-color: var(--verylightpeach);
+}
+.wrapper > .company__card:nth-child(4) > * .text__card h1 {
+  color: var(--peach);
+}
+/* third card */
+
+@media (max-width: 900px) {
+  .company__card {
+    max-height: 100%;
+  }
+  .inverse__container,
+  .container {
+    display: grid;
+  }
+  .company__card .inverse__container {
+    flex-direction: none;
+  }
+  .text__card {
+    width: 100%;
+    grid-row: 2;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .image__card_company {
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    padding: 10rem 0;
+  }
+  /* first card */
+  .company__card:nth-child(1) > * .image__card_company {
+    background-image: url(../../public/assets/about/tablet/image-about-hero.jpg);
+  }
+  /* first card */
+
+  /* second card */
+  .company__card:nth-child(2) > * .image__card_company {
+    background-image: url(../../public/assets/about/tablet/image-real-deal.jpg);
+  }
+
+  /* second card */
+
+  /* third card */
+  .wrapper > .company__card:nth-child(4) > * .image__card_company {
+    background-image: url(../../public/assets/about/tablet/image-world-class-talent.jpg);
+  }
+
+  /* third card */
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    padding: 0;
+  }
+  .company__card {
+    border-radius: 0;
+  }
+
+  /* first card */
+  .company__card:nth-child(1) > * .image__card_company {
+    background-image: url(../../public/assets/about/mobile/image-about-hero.jpg);
+  }
+  /* first card */
+
+  /* second card */
+  .company__card:nth-child(2) > * .image__card_company {
+    background-image: url(../../public/assets/about/mobile/image-real-deal.jpg);
+  }
+
+  /* second card */
+
+  /* third card */
+  .wrapper > .company__card:nth-child(4) > * .image__card_company {
+    background-image: url(../../public/assets/about/tablet/image-world-class-talent.jpg);
+  }
+
+  /* third card */
+}

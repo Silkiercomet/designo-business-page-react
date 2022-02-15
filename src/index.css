@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap");
+:root {
+  --peach: #e7806b;
+  --blendpeach: #c95c46;
+  --black: #1d1c1e;
+  /*secondary*/
+  --lightpeach: #ffac9b;
+  --verylightpeach: #fce7e1;
+  --darkgrey: #333136;
+  --lightgrey: #f3f5f6;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Jost", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--lightgrey);
+}
+#mobile {
+  display: none;
+}
+#mobile__menu li a {
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+#mobile__menu {
+  padding: 2rem 1.2rem;
+  list-style: none;
+}
+#mobile__menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--black);
+  margin: 0 auto;
+  bottom: -180px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 300ms ease-in-out;
+  row-gap: 1rem;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  padding: 0 2rem;
+  margin-bottom: 5rem;
+}
+#footer__space {
+  margin-bottom: 13rem;
+}
+#webDesign {
+  background-image: url(../public/assets/home/desktop/image-web-design-large.jpg);
+}
+#appDesign {
+  background-image: url(../public/assets/home/desktop/image-app-design.jpg);
+}
+#graphicDesign {
+  background-image: url(../public/assets/home/desktop/image-graphic-design.jpg);
+}
+#message {
+  max-width: 400px;
+  max-height: 150px;
+}
+
+@media (max-width: 650px) {
+  #mobile:checked + #mobile__menu {
+    opacity: 1;
+    bottom: -185px;
+    pointer-events: all;
+    z-index: 99;
+  }
+}

@@ -1,0 +1,242 @@
+.main__navbar ul {
+  display: flex;
+  list-style: none;
+  column-gap: 1.2rem;
+
+  overflow-y: visible;
+}
+.navigation {
+  position: relative;
+}
+
+.main__navbar ul li > * {
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  position: relative;
+}
+.main__navbar ul li > *::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--black);
+  transition: 300ms ease-in-out;
+}
+.main__navbar ul li > *:hover:after {
+  width: 100%;
+}
+.mobile__navbar {
+  display: none;
+}
+.logo {
+  max-height: 1.763rem;
+  width: 202px;
+  max-width: 205px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+.navigation a,
+.footer__menu a {
+  display: flex;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wrapper > * {
+  width: 100%;
+}
+
+/* footer */
+.footer {
+  background-color: var(--black);
+}
+.footer .wrapper {
+  padding: 0 2rem;
+}
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6rem;
+}
+.footer__menu .main__navbar ul li a {
+  color: white;
+}
+.footer__menu .main__navbar ul li > *::after {
+  background-color: white;
+}
+.footer__details {
+  display: flex;
+  justify-content: space-between;
+}
+.address {
+  display: flex;
+  column-gap: 3rem;
+}
+.address p {
+  color: #8e8d8e;
+}
+.footer__space {
+  padding: 3.125rem 0;
+  position: relative;
+}
+.line__mobile {
+  display: none;
+}
+.line__desktop {
+  display: block;
+}
+.line__desktop,
+.line__mobile {
+  opacity: 0.1;
+  margin: 2.5rem 0;
+}
+.social_tags {
+  display: flex;
+  column-gap: 1rem;
+  align-items: flex-end;
+}
+.social_tags > a {
+  transition: 300ms ease-in-out;
+}
+.social_tags > a:hover {
+  opacity: 0.5;
+}
+.author {
+  max-width: 470px;
+  margin: 2rem auto;
+  background-color: #474647;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+.author a {
+  text-decoration: none;
+  color: inherit;
+}
+.author a svg {
+  margin-left: 0.3rem;
+}
+.footer__space .banner__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--peach);
+  padding: 4rem 5rem;
+  border-radius: 1rem;
+  background-image: url(../../public/assets/shared/desktop/bg-pattern-call-to-action.svg);
+  background-repeat: no-repeat;
+  background-position: 45%, center;
+  background-size: cover;
+  /* position: absolute ;
+    top: 0; */
+  width: 100%;
+}
+.banner__container {
+
+  position: absolute;
+  top: -160%;
+}
+.contact__banner h1,
+.contact__banner p {
+  color: white;
+}
+.contact__banner h1 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 1.5rem;
+}
+.banner__btn {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white;
+  color: var(--black);
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  transition: 300ms ease-in-out;
+  max-width: max-content;
+}
+.banner__btn:hover {
+opacity: 0.8;
+}
+
+@media (max-width: 860px) {
+  .footer__menu {
+    flex-direction: column;
+    padding-top: 9rem;
+  }
+  .line__desktop {
+    display: none;
+  }
+  .line__mobile {
+    display: block;
+    margin: 1.5rem 0;
+    width: 100%;
+  }
+  .footer__menu .main__navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .footer__details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__details,
+  .address {
+    row-gap: 1.5rem;
+  }
+  .banner__container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  .line__break {
+    display: none;
+  }
+  .contact__banner p,
+  .contact__banner h1 {
+    text-align: center;
+  }
+  .contact__banner h1 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .navigation {
+    padding: 1.5rem;
+  }
+  .main__navbar .desktop__navbar {
+    display: none;
+  }
+  .mobile__navbar {
+    display: flex;
+    cursor: pointer;
+  }
+}

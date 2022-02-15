@@ -1,0 +1,89 @@
+.card h1, .card p{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.card h1{
+    font-size: 2rem;
+}
+.card p{
+    font-size: 1.2rem;
+}
+.projects{
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-areas: "a b" "a c";
+    height: 31.938rem;
+
+}
+.design:nth-child(1){
+    grid-area: a;
+    height: 100%;
+    border-radius: 15px;
+}
+.card{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border-radius: 15px;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.616);
+    transition: 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover{
+    transform: scale(1.03);
+    background-color: var(--peach);
+}
+
+.design:nth-child(2){
+    grid-area: b;
+}
+
+.design:nth-child(3){
+    grid-area: c;
+}
+
+
+@media (max-width:750px){
+    .projects{
+        grid-template-areas: "a" "b" "c";
+
+    }
+    .design:nth-child(1) .card{
+        background-image: url(../../public/assets/home/tablet/image-web-design.jpg);
+    
+    }
+    .design:nth-child(2) .card{
+        background-image: url(../../public/assets/home/tablet/image-app-design.jpg);
+    
+    }
+    .design:nth-child(3) .card{
+        background-image: url(../../public/assets/home/tablet/image-graphic-design.jpg);
+    
+    }
+}
+@media (max-width:500px){
+    .projects{
+        grid-template-areas: "a" "b" "c";
+
+    }
+    .design:nth-child(1) .card{
+        background-image: url(../../public/assets/home/mobile/image-web-design.jpg);
+    
+    }
+    .design:nth-child(2) .card{
+        background-image: url(../../public/assets/home/mobile/image-app-design.jpg);
+    
+    }
+    .design:nth-child(3) .card{
+        background-image: url(../../public/assets/home/mobile/image-graphic-design.jpg);
+    
+    }
+}

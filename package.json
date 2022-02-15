@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://Silkiercomet.github.io/designo-business-page-react",
+  "homepage": "https://silkiercomet.github.io/designo-business-page-react/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -16,8 +16,8 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "react-scripts start",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -32,6 +32,7 @@ function App() {
 
             <Route path="Location" element={<Location />} />
           </Route>
+            <Route path="*" element={<h1>not found 404</h1>} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

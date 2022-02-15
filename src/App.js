@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
@@ -10,7 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <HashRouter basename="/">
+
       <ScrollToTop>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -35,7 +35,6 @@ function App() {
             <Route path="*" element={<h1>not found 404</h1>} />
         </Routes>
       </ScrollToTop>
-    </HashRouter>
   );
 }
 

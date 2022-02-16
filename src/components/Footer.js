@@ -27,7 +27,7 @@ function Footer({ banner }) {
             <Button text={"get in touch"} route={"/Contact"}/>
           </div>
         </div>
-        <menu className={styles.footer__menu}>
+        <menu className={styles.footer__menu}> 
           <Link to="/" className={styles.footer__logo}>
             <img
               src="/assets/shared/desktop/logo-light.png"

@@ -70,10 +70,7 @@
     }
 }
 @media (max-width:500px){
-    .projects{
-        grid-template-areas: "a" "b" "c";
 
-    }
     .design:nth-child(1) .card{
         background-image: url(../../public/assets/home/mobile/image-web-design.jpg);
     
@@ -85,5 +82,11 @@
     .design:nth-child(3) .card{
         background-image: url(../../public/assets/home/mobile/image-graphic-design.jpg);
     
+    }
+}
+@media (max-width:420px){
+
+    .card h1{
+        text-align: center;
     }
 }

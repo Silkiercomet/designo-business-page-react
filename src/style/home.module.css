@@ -123,3 +123,32 @@
     }
 
 }
+@media (max-width:420px){
+    .hero__ilustration{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    .hero__ilustration img{
+        position: absolute;
+        bottom: -390px;
+    }
+
+}
+@media (max-width:330px){
+    .hero__text h1{
+        font-size: 25px;
+        line-height: 28px;
+        margin-top: 3rem;
+        padding-top: 1rem;
+    }
+    .hero__text p{
+        padding: 0 1rem;
+    }
+    .hero{
+        padding: 5rem 1.5rem;
+
+        padding-bottom: 18rem;
+        max-height: 100%;
+    }
+}

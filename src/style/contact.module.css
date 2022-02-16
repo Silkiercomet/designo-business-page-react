@@ -86,3 +86,18 @@
         background-size: 200%;
     }
 }
+@media (max-width:400px){
+
+    .left__formtext{
+        padding: 3rem 2rem 1.5rem 2rem;
+
+    }
+    .form__container .form{
+
+        padding: 1.5rem 2rem;
+
+    }
+    .container{
+        padding: 1rem 0;
+    }
+}
